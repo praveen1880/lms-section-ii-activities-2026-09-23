@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quiz Activity</title>
+    <style>
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap");
+:root { --navy:#1c2157; --heading:#1d1a55; --blue:#004785; --ink:#111111; --line:#c7cdd1; }
+* { box-sizing:border-box; }
+body { margin:0; padding:24px 28px; background:#ffffff; color:var(--ink); font:16px/1.55 "Lato",Arial,Helvetica,sans-serif; }
+.activity { width:100%; margin:0 auto; }
+hr { border:0; border-top:1px solid #c7cdd1; margin:20px 0; }
+p { margin:0 0 16px; }
+strong { font-weight:700; }
+.padding-sm { padding:16px 16px 18px; }
+.padding-sm h2 { margin:0 0 12px; font-size:28px; line-height:1.3; }
+.padding-sm h2 > strong, .padding-sm h2 > strong > span { display:block; }
+.padding-sm h2 > strong > span > span { display:flex; align-items:center; gap:10px; }
+.padding-sm ol { margin:0; padding-left:28px !important; }
+.padding-sm li { padding-left:0; }
+h3 { display:flex; align-items:center; justify-content:center; gap:10px; margin:0; line-height:1.3; }
+h3 > strong { flex:0 0 55px; line-height:0; }
+h3 > span { min-width:0; }
+.padding-sm h2 img, h3 img { display:inline-block; width:55px; height:55px; flex-shrink:0; vertical-align:middle; }
+.containerA + p { margin-top:20px; }
+
+button,input{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible{outline:3px solid #004785;outline-offset:4px}button.primary,button.secondary{border:1px solid var(--blue);border-radius:4px;min-height:44px;padding:9px 18px;font-weight:700}.primary{color:#fff;background:var(--blue)}.primary:hover{background:#00345f}.secondary{background:white;color:var(--blue)}.secondary:hover{background:#e6faf8}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}.hint{color:#46545e;font-size:14px}
+fieldset{border:0;padding:0;margin:0;min-width:0}legend{padding:0;width:100%;margin-bottom:22px}.option{display:flex;align-items:flex-start;gap:10px;padding:13px 4px;border-top:1px solid #e1e5e8;cursor:pointer;min-height:48px}.option:last-of-type{border-bottom:1px solid #e1e5e8}.option input{width:18px;height:18px;flex:none;margin:4px 0 0;accent-color:var(--blue)}.option:has(input:checked){background:#edf6fc}.feedback{padding:16px 18px;border-left:4px solid var(--blue);background:#e3e9f0;margin-top:20px}.feedback:empty{display:none}.feedback[data-kind=correct]{border-color:#267040;background:#edf7ef}
+
+
+@media(max-width:600px) {
+ body { padding:16px; }
+ .padding-sm { padding:14px 12px; }
+ .padding-sm h2 { font-size:23px; }
+ h3 > span { font-size:21px !important; }
+ .cards { grid-template-columns:1fr; }
+ .popup-stage { padding:20px 16px; }
+ .popup-sentence { font-size:21px; line-height:2.5; }
+ .popup-modal-header,.popup-modal-body { padding:22px; }
+}
+@media(prefers-reduced-motion:reduce) {
+ *,*::before,*::after { transition:none !important; animation:none !important; scroll-behavior:auto !important; }
+}
+    </style>
+</head>
+<body>
+    <div class="activity">
+        <div style="background-color: #e6faf8; border-radius: 10px;">
+            <p class="kl_module_progress_completion" style="display: none; background-color: #1c2157; color: #ffffff;">Module Item Completion (built in browser, hidden in app)</p>
+        </div>
+        <hr />
+        <div class="containerA" style="overflow: hidden;">
+            <div class="para" style="overflow: hidden;">
+                <div class="padding-sm" style="background-color: #e3e9f0; border-radius: 15px; padding-top: 1ch;">
+                    <h2><strong><span style="color: #004785;"><span style="color: #1d1a55;"><img role="presentation" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2255%22%20height%3D%2255%22%20viewBox%3D%220%200%2055%2055%22%3E%3Ccircle%20cx%3D%2227.5%22%20cy%3D%2227.5%22%20r%3D%2226%22%20fill%3D%22%231c2157%22%2F%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%2300b89c%22%20stroke-width%3D%222%22%3E%3Ccircle%20cx%3D%2227.5%22%20cy%3D%2227.5%22%20r%3D%2216%22%2F%3E%3Ccircle%20cx%3D%2227.5%22%20cy%3D%2227.5%22%20r%3D%229%22%2F%3E%3C%2Fg%3E%3Ccircle%20cx%3D%2227.5%22%20cy%3D%2227.5%22%20r%3D%223%22%20fill%3D%22%2300b89c%22%2F%3E%3C%2Fsvg%3E" alt="" width="55" /> Learning outcome addressed </span></span></strong></h2>
+                    <ol style="list-style-type: decimal; padding: 10px;">
+                        <li>Choose a responsible response when AI-generated learning content contains an unsupported claim.</li>
+                    </ol>
+                </div>
+            </div>
+            <hr />
+            <h3 style="text-align: center;"><strong><span style="color: #004785;"><span style="color: #1d1a55;"><img role="presentation" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2255%22%20height%3D%2255%22%20viewBox%3D%220%200%2055%2055%22%3E%3Ccircle%20cx%3D%2227.5%22%20cy%3D%2227.5%22%20r%3D%2226%22%20fill%3D%22%231c2157%22%2F%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%2300b89c%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Crect%20x%3D%2215%22%20y%3D%2218%22%20width%3D%225%22%20height%3D%225%22%20rx%3D%221%22%2F%3E%3Cpath%20d%3D%22M16%2019.5l1.5%201.5%204-4%22%2F%3E%3Crect%20x%3D%2215%22%20y%3D%2226%22%20width%3D%225%22%20height%3D%225%22%20rx%3D%221%22%2F%3E%3Crect%20x%3D%2215%22%20y%3D%2234%22%20width%3D%225%22%20height%3D%225%22%20rx%3D%221%22%2F%3E%3Cpath%20d%3D%22M24%2018h14M24%2021h8M24%2026h14M24%2029h8M24%2034h14M24%2037h8%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="" width="55" /> </span></span></strong><span style="font-size: 18pt; color: #1d1a55;"><strong>Quiz Activity</strong></span></h3>
+            <hr />
+            <p>Read the scenario and select one correct answer. Select Check answer to view feedback. Select Try again to clear your answer and start again.</p>
+            <form id="quiz"><fieldset><legend>An AI tool drafts a workplace learning guide. It includes a confident claim that you cannot find in the source document. What should you do before sharing the guide?</legend>
+<label class="option"><input type="radio" name="answer" value="a"><span>Share the guide as written because the AI sounds confident.</span></label>
+<label class="option"><input type="radio" name="answer" value="b"><span>Check the claim against reliable sources, then correct or remove unsupported information before sharing.</span></label>
+<label class="option"><input type="radio" name="answer" value="c"><span>Ask the AI to repeat the claim and treat the repeated answer as proof.</span></label></fieldset>
+<div class="actions"><button class="primary" type="submit">Check answer</button><button class="secondary" type="reset">Try again</button></div><div class="feedback" role="status" aria-live="polite" aria-atomic="true" id="feedback"></div></form>
+        </div>
+        <p><span>The average completion time for this activity is </span><span>3 </span><span>minutes.</span></p>
+        <p><i><span>This is a self-study activity and does not count towards programme completion.</span></i></p>
+    </div>
+    <script>const form=document.querySelector('#quiz'),feedback=document.querySelector('#feedback');
+const responses={a:'Incorrect. A confident tone does not establish accuracy. Verify the claim against reliable sources before using it.',b:'Correct. Checking reliable sources and correcting or removing unsupported information reduces the risk of sharing inaccurate AI output.',c:'Incorrect. Repeating an AI-generated claim is not independent verification. Check reliable source material instead.'};
+form.addEventListener('submit',event=>{event.preventDefault();const selected=form.querySelector('input:checked');feedback.dataset.kind=selected?.value==='b'?'correct':'incorrect';feedback.textContent=selected?responses[selected.value]:'Select an answer before checking.';if(!selected)form.querySelector('input').focus();});
+form.addEventListener('change',()=>{feedback.textContent='';delete feedback.dataset.kind;});form.addEventListener('reset',()=>{feedback.textContent='';delete feedback.dataset.kind;form.querySelector('input').focus();});</script>
+</body>
+</html>
